@@ -1,0 +1,108 @@
+:root,body{
+    height: 100%;
+}
+body{
+    perspective:2000px;
+    transform-style:preserve-3d;
+}
+div.wrapper{    
+    position: absolute;
+    left: calc(50% - 150px);
+    top:calc(50% - 150px);
+    width: 300px;
+    height:300px;
+    transform-style:preserve-3d;
+}
+@keyframes round {
+    0%{
+        transform:rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}
+.outside{
+    transform-style: preserve-3d;
+    position: relative;
+    left: calc(50% - 150px);
+    top:calc(50% - 150px);
+    width: 300px;
+    height:300px;
+    animation:round 10s linear infinite;
+
+}
+.wrapper img{    
+    position: absolute;
+    width: 300px;
+    height:300px;
+    opacity:0.8;
+    transition:all 1s;
+}
+.content img{
+    position: absolute;
+    width: 150px;
+    height:150px;
+}
+.one{
+    transform:rotate(0deg) translateZ(150px);
+}
+.wrapper:hover .one{
+    transform:rotate(0deg) translateZ(250px);
+}
+.two{
+    transform:rotateY(180deg) translateZ(150px);
+}
+.wrapper:hover .two{
+    transform:rotateY(180deg) translateZ(250px);
+}
+.three{
+    transform:rotateY(90deg) translateZ(150px);
+}
+.wrapper:hover .three{
+    transform:rotateY(90deg) translateZ(250px);
+}
+.four{
+    transform:rotateY(-90deg) translateZ(150px);
+}
+.wrapper:hover .four{
+    transform:rotateY(-90deg) translateZ(250px);
+}
+.five{
+    transform:rotateX(90deg) translateZ(150px);
+}
+.wrapper:hover .five{
+    transform:rotateX(90deg) translateZ(250px);
+}
+.six{ 
+    transform:rotateX(-90deg) translateZ(150px);
+}
+.wrapper:hover .six{
+    transform:rotateX(-90deg) translateZ(250px);
+}
+
+.content{
+    position: absolute;
+    left: calc(50% - 75px);
+    top:calc(50% - 75px);
+    width: 150px;
+    height:150px;
+    transform-style:preserve-3d;
+}
+.content-1{
+    transform:rotate(0deg) translateZ(75px);
+}
+.content-2{
+    transform:rotateY(180deg) translateZ(75px);
+}
+.content-3{
+    transform:rotateY(90deg) translateZ(75px);
+}
+.content-4{
+    transform:rotateY(-90deg) translateZ(75px);
+}
+.content-5{
+    transform:rotateX(90deg) translateZ(75px);
+}
+.content-6{
+    transform:rotateX(-90deg) translateZ(75px);
+}
